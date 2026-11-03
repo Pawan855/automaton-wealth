@@ -1,0 +1,22 @@
+name: Automaton Wakeup
+on:
+  schedule:
+    - cron: '0 */2 * * *'
+  workflow_dispatch:
+
+jobs:
+  run-agent:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - run: npm install
+      - run: npx tsx agent/index.ts
+      - run: |
+          git config --global user.name 'Automaton Agent'
+          git config --global user.email 'agent@automaton.local'
+          git add agent/state.json
+          git commit -m "Agent auto-update: earned today" || echo "No changes"
+          git push
