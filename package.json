@@ -1,0 +1,19 @@
+{
+  "name": "automaton-wealth",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "next dev",
+    "agent": "npx tsx agent/index.ts"
+  },
+  "dependencies": {
+    "next": "14.2.0",
+    "openai": "^4.0.0",
+    "react": "18.3.0",
+    "react-dom": "18.3.0",
+    "tsx": "^4.7.0",
+    "typescript": "^5.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "19.3.0"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "balance": 15.09,
+  "tier": "normal",
+  "totalEarned": 476.67,
+  "products": [
+    {
+      "name": "PDF2Excel Pro",
+      "mrr": 161,
+      "users": 23
+    },
+    {
+      "name": "ThumbGen AI",
+      "mrr": 205,
+      "users": 41
+    },
+    {
+      "name": "Resume ATS Checker",
+      "mrr": 108,
+      "users": 12
+    }
+  ],
+  "logs": [
+    "[3/11/2026, 2:31:11 pm] 😴 Agent sleeping for 2 hours... will wake up itself",
+    "[3/11/2026, 2:31:11 pm] 🔧 Checked all products health - all OK",
+    "[3/11/2026, 2:31:11 pm] 💰 Earned $2.67 from Micro-SaaS subscriptions",
+    "[3/11/2026, 2:31:11 pm] Paid $0.05 for compute (gpt-4o)",
+    "[03/11/2026] Agent started - Namaste Anna!",
+    "[03/11/2026] Earned $3.20 from Micro-SaaS"
+  ]
+}
