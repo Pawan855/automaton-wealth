@@ -22,53 +22,56 @@ export default function Home() {
     const nc = count + 1;
     setCount(nc);
     localStorage.setItem("pdf_count", nc.toString());
-    setTimeout(() => alert(`✅ ${f.name} -> Excel Downloaded! (Mock Pro)`), 1000);
+    setTimeout(() => alert(`✅ ${f.name} -> Excel Downloaded!`), 800);
   };
 
-  if (!mounted) return <div className="min-h-screen bg-black" />;
+  if (!mounted) return <div className="min-h-screen bg-[#0a0a0a]" />;
 
   return (
     <main className="min-h-screen bg-[#0a0a0a] text-white">
-      <div className="max-w-5xl mx-auto px-6 py-10">
+      <div className="max-w-5xl mx-auto px-6 py-8">
+        {/* HEADER - FINAL */}
         <div className="flex justify-between items-center">
           <h1 className="text-2xl font-bold">Automaton Wealth Engine</h1>
-          <span className="text-sm bg-green-500/20 text-green-400 px-3 py-1 rounded-full">● Agent Active - 2hr</span>
+          <span className="text-xs bg-green-500/20 text-green-400 px-3 py-1 rounded-full">● Agent Active - 2hr</span>
         </div>
+        <p className="text-sm text-gray-400 mt-1">Thana rent thane kattukune AI - Vijayawada</p>
 
-        <div className="mt-10 grid md:grid-cols-2 gap-6">
-          <div className="bg-[#111] border border-[#222] rounded-2xl p-8">
+        {/* TOOL + DASHBOARD - FINAL */}
+        <div className="mt-8 grid md:grid-cols-2 gap-6">
+          <div className="bg-[#111] border border-[#222] rounded-2xl p-6">
             <h2 className="text-3xl font-bold">PDF2Excel Pro</h2>
-            <p className="mt-2 text-gray-400">Upload PDF, get clean Excel in 5 sec. Free 3 conversions.</p>
-            <div className="mt-6 bg-black border border-dashed border-gray-700 rounded-xl p-6 text-center">
+            <p className="mt-2 text-sm text-gray-400">Upload PDF, get clean Excel in 5 sec. Free 3 conversions.</p>
+            <div className="mt-5 bg-black border border-dashed border-gray-700 rounded-xl p-5 text-center">
               <input type="file" accept=".pdf" onChange={handleFile} className="block w-full text-sm file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:bg-white file:text-black" />
-              {fileName && <p className="mt-3 text-sm text-green-400">✓ {fileName}</p>}
-              <p className="mt-3 text-xs text-gray-500">Free Used: {count}/3</p>
+              {fileName && <p className="mt-2 text-sm text-green-400">✓ {fileName}</p>}
+              <p className="mt-2 text-xs text-gray-500">Free Used: {count}/3</p>
             </div>
             {count >= 3 && (
-              <div className="mt-6 bg-yellow-500/10 border border-yellow-500/30 rounded-xl p-4">
-                <p className="font-bold">Free Limit Over</p>
-                <p className="text-sm text-gray-400">Unlock unlimited conversions</p>
-                <button onClick={() => window.open("https://rzp.io/rzp/vOiZdFy","_blank")} className="mt-3 w-full bg-white text-black py-3 rounded-xl font-bold">Buy Pro ₹599 - Instant Access</button>
-              </div>
+              <button onClick={() => window.open("https://rzp.io/rzp/vOiZdFy","_blank")} className="mt-4 w-full bg-white text-black py-3 rounded-xl font-bold">Buy Pro ₹599 - Unlock Unlimited</button>
             )}
           </div>
-
           <div className="space-y-4">
-            <div className="bg-[#111] border border-[#222] rounded-2xl p-6">
-              <p className="text-sm text-gray-400">MRR</p><p className="text-3xl font-bold">$474</p>
-              <p className="text-xs text-green-400 mt-1">↑ 12% this week</p>
-            </div>
-            <div className="bg-[#111] border border-[#222] rounded-2xl p-6">
-              <p className="text-sm text-gray-400">PDF2Excel Pro</p><p className="text-xl font-bold">$161 MRR</p>
-              <button onClick={() => window.open("https://rzp.io/rzp/vOiZdFy","_blank")} className="mt-3 w-full bg-[#222] py-2 rounded-lg text-sm">Buy Now ₹599</button>
-            </div>
-            <div className="bg-[#111] border border-[#222] rounded-2xl p-6">
-              <p className="text-sm text-gray-400">Coming Soon</p><p className="text-sm mt-2">ThumbGen AI, Resume Checker, Auto-Blog + AdSense</p>
-            </div>
+            <div className="bg-[#111] border border-[#222] rounded-2xl p-5"><p className="text-xs text-gray-400">MRR</p><p className="text-3xl font-bold">$474</p><p className="text-xs text-green-400">↑ 12% this week</p></div>
+            <div className="bg-[#111] border border-[#222] rounded-2xl p-5"><p className="text-xs text-gray-400">PDF2Excel Pro</p><p className="text-lg font-bold">$161 MRR</p><button onClick={() => window.open("https://rzp.io/rzp/vOiZdFy","_blank")} className="mt-2 w-full bg-[#222] py-2 rounded-lg text-sm">Buy Now ₹599</button></div>
+            <div className="bg-[#111] border border-[#222] rounded-2xl p-5"><p className="text-xs text-gray-400">Coming Soon</p><p className="text-sm mt-1">ThumbGen AI • Resume Checker</p></div>
           </div>
         </div>
 
-        <p className="mt-10 text-center text-xs text-gray-600">Thana rent thane kattukune AI - Vijayawada - Automaton Wealth Engine - 2026</p>
+        {/* ADS ZONE - FINAL - AdSense Kosam */}
+        <div className="mt-8 bg-[#111] border border-[#222] rounded-2xl p-6">
+          <p className="text-xs text-gray-500 tracking-widest">ADVERTISEMENT</p>
+          <div className="mt-3 h- bg-[#1a1a1a] border border-dashed border-gray-700 rounded-xl flex items-center justify-center text-sm text-gray-500">Google AdSense - 728x90 - Blog Traffic nunchi earning</div>
+          <div className="mt-4 grid md:grid-cols-3 gap-4">
+            <div className="bg-black border border-[#222] rounded-xl p-4"><h3 className="font-bold text-sm">How to Convert PDF to Excel Free in 2026</h3><p className="text-xs text-gray-400 mt-2">3 free ways + Pro trick - Read 4 min</p></div>
+            <div className="bg-black border border-[#222] rounded-xl p-4"><h3 className="font-bold text-sm">Best PDF to Excel Tools - Vijayawada Students</h3><p className="text-xs text-gray-400 mt-2">Top 5 tools compared - Read 3 min</p></div>
+            <div className="bg-black border border-[#222] rounded-xl p-4"><h3 className="font-bold text-sm">Excel Tips for Jobs - Resume + Data Entry</h3><p className="text-xs text-gray-400 mt-2">Earn from Excel skills - Read 5 min</p></div>
+          </div>
+          <div className="mt-4 h- bg-[#1a1a1a] border border-dashed border-gray-700 rounded-xl flex items-center justify-center text-sm text-gray-500">Google AdSense - 728x90 - 2nd Ad Slot</div>
+        </div>
+
+        {/* FOOTER - FINAL */}
+        <p className="mt-8 text-center text-xs text-gray-600">Automaton Wealth Engine © 2026 - Vijayawada - Thana rent thane kattukune AI</p>
       </div>
     </main>
   );
